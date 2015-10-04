@@ -1,0 +1,45 @@
+.header {
+	background: url('../img/pattern.svg') repeat center;
+	background-color: $color-primary;
+	position: relative;
+	overflow: hidden;
+
+	.title {
+		display: none;
+		@include span-columns(6);
+		color: $color-white;
+		padding: 180px 0;
+
+		@include media($mobile) {
+			@include span-columns(12);
+			@include omega;
+			text-align: center;
+			padding: 100px 0;
+		}
+
+		h1 {
+			padding-right: 5%;
+			margin-bottom: .85em;
+
+			@include media($tablet) {
+				padding-right: 0;
+			}
+		}
+	}
+
+	.device {
+		@include span-columns(6);
+		text-align: center;
+
+		img {
+			position: absolute;
+			bottom: -505px;
+			right: 25%;
+			margin-right: -140px;
+		}
+
+		@include media($mobile) {
+			display: none;
+		}
+	}
+}

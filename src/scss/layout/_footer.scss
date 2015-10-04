@@ -1,0 +1,45 @@
+.footer {
+	padding: 40px 10px;
+	background-color: $dark-color;
+	// font-family: $font-family-secondary;
+	font-size: em(14px);
+	color: $color-white;
+
+
+	p {
+		margin-top: 0;
+	}
+
+	.contact {
+		@include span-columns(6);
+
+		p:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+
+	.logo {
+		height: 30px;
+		width: 102px;
+		margin-top: 45px;
+	}
+
+	.links {
+		@include span-columns(6);
+		margin-top: 0;
+
+		p:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+
+	.copyright {
+		// font-family: $font-family--primary;
+		display: block;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+}

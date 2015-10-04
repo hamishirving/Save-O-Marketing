@@ -1,0 +1,23 @@
+body {
+	font-family: $font-family-primary;
+	font-size: em(16);
+	color: $color-black;
+
+}
+
+h1 {
+	font-size: em(30);
+	line-height: 1.33;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: em(20);
+	line-height: 1.25;
+	font-weight: 400;
+}
+
+.brand {
+	font-family: $font-family-secondary;
+	font-weight: 900;
+}

@@ -1,0 +1,91 @@
+.merchants {
+	@include clearfix;
+
+	.merchants-header {
+		width: 52%;
+		float: left;
+		background: linear-gradient(rgba(18,106,217,0.9),rgba(18,106,217,0.9)), url('../img/merchants-consumer.jpg');
+		background-size: cover;
+		background-position: left center;
+		background-color: rgba(18,106,217,0.9);
+		height: 485px;
+		position: relative;
+		text-align: center;
+		color: $color-white;
+		padding: 200px 0;
+
+		&:before {
+			content: "";
+			position: absolute;
+			height: 50%;
+			right: 0;
+			top: 0;
+			border-right: 20px solid $color-white;
+			border-bottom: 20px solid transparent;
+			display: block;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			height: 50%;
+			right: 0;
+			bottom: 0;
+			border-right: 20px solid $color-white;
+			border-top: 20px solid transparent;
+			display: block;
+		}
+
+		@include media($tablet) {
+			width: 53.5%;
+		}
+
+		@include media($mobile) {
+			width: 100%;
+
+			&:before {
+			    content: "";
+			    position: absolute;
+			    width: 50%;
+			    height: 100%;
+			    left: 0;
+			    bottom: 0;
+			    border-bottom: 20px solid #fff;
+			    border-right: 20px solid transparent;
+			    display: block;
+			}
+
+			&:after {
+			    content: "";
+			    position: absolute;
+			    width: 50%;
+			    height: 100%;
+			    right: 0;
+			    bottom: 0;
+			    border-bottom: 20px solid #fff;
+			    border-left: 20px solid transparent;
+			    border-right: none;
+			    display: block;
+			}
+		}
+	}
+
+	.content {
+		width: 48%;
+		min-height: 485px;
+		display: inline-block;
+		padding: 7%;
+
+		.title {
+			font-weight: 600;
+		}
+
+		@include media($tablet) {
+			width: 46.5%;
+		}
+
+		@include media($mobile) {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.intro {
+	text-align: center;
+	padding: 80px 0;
+
+	.explainer {
+		@include span-columns(4);
+		visibility: hidden;
+		padding: 40px 5%;
+
+		@include media($mobile) {
+			@include span-columns(12);
+		}
+	}
+}

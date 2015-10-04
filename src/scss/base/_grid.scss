@@ -1,0 +1,18 @@
+// Grid
+
+$max-width: em(980);
+
+// Breakpoints
+
+$mobile: new-breakpoint(max-width 568px);
+$tablet: new-breakpoint(max-width 768px);
+
+
+.container {
+	@include outer-container;
+
+	@include media($tablet) {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
