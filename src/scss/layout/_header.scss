@@ -1,5 +1,5 @@
 .header {
-	background: url('../img/pattern.svg') repeat center;
+	background: url('../img/pattern.svg') repeat bottom;
 	background-color: $color-primary;
 	position: relative;
 	overflow: hidden;
@@ -29,13 +29,31 @@
 
 	.device {
 		@include span-columns(6);
+		@include clearfix;
 		text-align: center;
 
 		img {
 			position: absolute;
-			bottom: -505px;
+			bottom: -64px;
 			right: 25%;
 			margin-right: -140px;
+			height: 100%;
+		}
+
+		.swiper-container {
+			height: 300px;
+			width: 150px;
+			margin: 0;
+			position: relative;
+			top: 0;
+			left: 0;
+
+			.swiper-slide {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background: grey;
+			}			
 		}
 
 		@include media($mobile) {

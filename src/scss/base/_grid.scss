@@ -6,13 +6,15 @@ $max-width: em(980);
 
 $mobile: new-breakpoint(max-width 568px);
 $tablet: new-breakpoint(max-width 768px);
+$landscape: new-breakpoint(max-width 1024px);
 
 
 .container {
 	@include outer-container;
 
-	@include media($tablet) {
+	@include media($landscape) {
 		padding-left: 5%;
 		padding-right: 5%;
 	}
+	
 }

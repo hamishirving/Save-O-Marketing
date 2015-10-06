@@ -29,6 +29,16 @@
             </div>
             <div class="device">
                 <img src="assets/img/iphone.png" width="280px">
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -53,57 +63,79 @@
 
     <section class="merchants">
         <div class="merchants-header">
-            <h1><span class="brand">Save-O</span> for Merchants</h1>
+            <div class="merchants-title">
+                <img src="assets/img/logo-white.svg">
+                <h1>for Merchants</h1>
+                <button>Contact Us</button>
+            </div>
         </div>
         <div class="content">
             <p class="title">Save-O offers service stations a low cost  alternative to pay-at-pump.</p>
             <p class="title">Customers gain payment pre-approval before commencing their fill and pay for their fuel purchase using their mobile phone:</p>
             <ul>
-                <li>Low-cost installation process</li>
-                <li>Minimal hardware and infrastructure requirements</li>
-                <li>No additional resources required – and helps reduce staff costs</li>
-                <li>Allow out-of-hours purchases</li>
-                <li>Keep track of purchases using a simple web dashboard</li>
+                <li>Low-cost installation process.</li>
+                <li>Minimal hardware and infrastructure requirements.</li>
+                <li>No additional resources required – and helps reduce staff costs.</li>
+                <li>Allow out-of-hours purchases.</li>
+                <li>Keep track of purchases using a simple web dashboard.</li>
             </ul>
         </div>
     </section>
 
     <section class="consumers">
         <div class="content">
-            <p class="title">Save-O offers service stations a low cost  alternative to pay-at-pump.</p>
-            <p class="title">Customers gain payment pre-approval before commencing their fill and pay for their fuel purchase using their mobile phone:</p>
+            <p class="title">Save-O allows you to search for petrol stations in your area and view real-time pricing.</p>
+            <p class="title">You can select a station, reserve a pump and pay for fuel all from the convenience of your mobile phone without having to go in-store:</p>
             <ul>
-                <li>Low-cost installation process</li>
-                <li>Minimal hardware and infrastructure requirements</li>
-                <li>No additional resources required – and helps reduce staff costs</li>
-                <li>Allow out-of-hours purchases</li>
-                <li>Keep track of purchases using a simple web dashboard</li>
+                <li>Save money by finding the cheapest fuel nearby when you’re out and about.</li>
+                <li>Save time by finalising your purchase at the pump without going in-store.</li>
+                <li>Keep track of your fuel purchases and view your transaction history in one place.</li>
             </ul>
         </div>
         <div class="consumers-header">
-            <h1><span class="brand">Save-O</span> for Consumers</h1>
+            <div class="consumers-title">
+                <img src="assets/img/logo-white.svg">
+                <h1>for Consumers</h1>
+                <button>Contact Us</button>
+            </div>
         </div>
     </section>
 
     <section class="contact">
         <div class="container">
-            <form class="contact-form">
-                <input type="text" id="name" placeholder="First name">
-            </form>
+            <div class="form-wrapper">
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="name">Email address:</label>
+                    <input type="email" id="email">
+                    <label for="type">I am a:</label>
+                    <select type="email" id="type">
+                        <option value="media-rep">Media Representative</option>
+                        <option value="fuel-rep">Fuel Company Representative</option>
+                        <option value="station">Petrol Station</option>
+                        <option value="consumer">Consumer</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="query">Query:</label>
+                    <textarea type="textarea" id="query" maxlength="500" rows="3"></textarea>
+                    <label for="refer">How did you hear about us?</label>
+                    <input type="text" id="refer">
+                    <button>Send</button>
+                    <button>Cancel</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="contact">
-                <p>Email us</p>
-                <img class="logo" src="img/svg/icon_logo_footer.svg" alt="Save-O Logo">
+            <div class="logo">
+                <img src="assets/img/logo-white.svg" height="45px">
             </div>
             <div class="links">
-                <p>Terms &amp; Conditions</p>
-                <p>Privacy Policy</p>
-                <p>Help</p>
+                <a href="#">Privacy Policy</a>
             </div>
         </div>
         <p class="copyright">&copy; Save-O 2015</p>
@@ -116,7 +148,18 @@
     <script src="assets/js/enquire.min.js"></script>
     <script src="assets/js/jquery.waypoints.min.js"></script>
     <script src="assets/js/inview.min.js"></script>
+    <script src="assets/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
+
+    <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+            autoplay: 4000,
+            loop: true,
+            grabCursor: true,
+            autoplayDisableOnInteraction: false
+        })
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

@@ -3,7 +3,7 @@
 	'use strict';
 
 	// Use Enquire.js to swap Consumers Header & Consumers content sections on mobile
-	enquire.register('screen and (max-width:568px)', {
+	enquire.register('screen and (max-width:768px)', {
 	    match : function() { 
 	            $('.consumers .content').insertAfter('.consumers-header');
 	    },
@@ -16,7 +16,7 @@
 
 	// Items to animate
 	var title = $('.header .title');
-	var explainer = $('.intro .explainer');
+	// var explainer = $('.intro .explainer');
 	var device = $('.header .device img');
 
   	// Fade in title section in header on pageload
@@ -25,24 +25,28 @@
 	});
 
 	// Slide up device in header section on pageload
-	device.velocity({
-		bottom: 0
-		}, 1200, 'easeOutBack' );
+	device.velocity('transition.slideUpBigIn', {
+		duration: 1200
+	});
 
   	// Fade in explainer elements on scroll with Waypoints.js
-	var inview = new Waypoint.Inview({
-		element: $('.intro h1'),
-		entered: function(direction) {
-			if (direction === 'down') {
-				explainer.velocity('transition.slideLeftIn', {
-					stagger: 300,
-					duration: 1000,
-					visibility: 'visible'
-				});	
-			} else {
-				inview.disable();
-			}
-		},
-	});
+
+	// var inview = new Waypoint.Inview({
+	// 	element: $('.intro h1'),
+	// 	entered: function(direction) {
+	// 		if (direction === 'down') {
+	// 			explainer.velocity('transition.slideLeftIn', {
+	// 				stagger: 300,
+	// 				duration: 1000,
+	// 				visibility: 'visible'
+	// 			});	
+	// 		} else {
+	// 			inview.disable();
+	// 		}
+	// 	},
+	// });
+
+	// Initialise jQuery Nice Select: http://hernansartorio.com/jquery-nice-select/
+	$('select').niceSelect();
 
 })(jQuery, window, document);
